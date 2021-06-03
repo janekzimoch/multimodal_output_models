@@ -1,6 +1,6 @@
 # multimodel_output_models
  
-In this repository i explore different methods of modeling problems where for a given input there are many potential solutions. You can also think of it as one-to-many mapping or input having multimodal output. Standard, discriminative regression machine learning models orclassification models with a softmax head are unable to output a set of potential solutions and willeither fail at learning the task or will consistently output only single output. 
+In this repository i explore different methods of modeling problems where for a given input there are many potential solutions. You can also think of it as one-to-many mapping or input having multimodal output. Standard, discriminative regression machine learning models or classification models with a softmax head are unable to output a set of potential solutions and will either fail at learning the task or will consistently output only single output. 
 
 To model problems with multimodal output we need to output a probability distribution p(y|x) where rather than a scalar our model outputs adsitribution. 
 ### In this repository we explore following models:
