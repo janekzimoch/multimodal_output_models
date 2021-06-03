@@ -102,14 +102,14 @@ def get_dataset__many_linear_functions(N = 1000, num_components=3):
     epsilon = np.random.normal(0,0.1,size=n*num_components)
     cluster_assignment = np.zeros(n*num_components, dtype=int)
 
-    x_shifts = np.random.uniform(low=-20, high=20, size=num_components)
-    y_shifts = np.random.uniform(low=-5, high=5, size=num_components)
+    x_shifts = np.random.uniform(low=-5, high=5, size=num_components)
+    y_shifts = np.random.uniform(low=-10, high=10, size=num_components)
     gradients = np.random.uniform(low=-5, high=5, size=num_components)
-    lengths = np.random.uniform(low=1, high=5, size=num_components)
+    # lengths = np.random.uniform(low=1, high=5, size=num_components)
 
-    for i, x_shift, y_shift, gradient, length in zip(range(num_components), x_shifts, y_shifts, gradients, lengths):
-        x_tmp = length*np.linspace(-1, 1, n) + x_shift
-        y_tmp = gradient * x_tmp + y_shift + epsilon[n*i:n*(i+1)]
+    for i, x_shift, y_shift, gradient in zip(range(num_components), x_shifts, y_shifts, gradients):
+        y_tmp = np.random.normal(y_shift, 1, size=n) 
+        x_tmp = 1/gradient * y_tmp + y_shift + epsilon[n*i:n*(i+1)]
         x += list(x_tmp)
         y += list(y_tmp)
         cluster_assignment[n*i:n*(i+1)] = i
