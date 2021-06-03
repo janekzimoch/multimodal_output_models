@@ -10,7 +10,7 @@ To model problems with multimodal output we need to output a probability distrib
 ### To fully explore different Multimodal Output Models I create 3 toy-datasets:
 * 1. Mixture of Linear Functions
 * 2. Mixture of inverted Sinusoidal functions - where each inverted sinusoid may hav multiple y outputs for some x values.
-* 3. A custom dataset which is meant to be a extreme simplification of camera relocalisation task which i do for my disertation
+* 3. A custom dataset which is meant to be an extreme simplification of camera relocalisation task which i do for my disertation
 
 
 ### This repository has following notebooks:
